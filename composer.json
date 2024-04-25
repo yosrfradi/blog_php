@@ -1,0 +1,14 @@
+{
+  "name": "pc/ds2web",
+  "require": {
+    "twbs/bootstrap": "^5.3",
+    "jcobhams/newsapi": "^1.0",
+    "jquery-form/form": "^4.3",
+    "andcarpi/laravel-popper": "^0.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}

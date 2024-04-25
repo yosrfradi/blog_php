@@ -1,0 +1,140 @@
+/* Ajout de la photo de background avec couche grise transparente */
+body {
+    background-image: url('background.jpg'); /* Chemin vers votre image de background */
+    background-size: cover; /* Pour couvrir toute la surface de l'écran */
+    background-position: center;
+    position: relative;
+}
+
+/* Couche grise transparente */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur grise transparente */
+    background-size: cover;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px; /* Ajustez la hauteur du navbar selon vos besoins */
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+    z-index: 100;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+.link:hover,
+.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Responsive Navbar */
+@media only screen and (max-width: 786px) {
+    .nav-menu.responsive {
+        top: 100px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Container */
+.container {
+    padding-top: 100px; /* Hauteur du navbar */
+}
+
+/* Anciens commentaires */
+.jumbotron {
+    background-color: rgba(192, 193, 194, 0.8); /* Couleur de fond avec transparence */
+    margin-right: 10px; /* Marge à droite pour s'éloigner un peu */
+    padding: 20px; /* Rembourrage pour s'agrandir */
+    border-radius: 5%;
+}
+
+/* Formulaire pour ajouter un commentaire */
+.card {
+    background-color: rgba(192, 193, 194, 0.8); /* Couleur de fond avec transparence */
+    margin-left: 10px; /* Marge à gauche pour s'éloigner un peu */
+    padding: 20px; /* Rembourrage pour s'agrandir */
+    border-radius: 5%;
+}
+
+/* Style pour afficher le temps dans un fond gris */
+.time {
+    color: #555; /* Couleur du texte gris */
+    padding: 5px 10px; /* Rembourrage pour séparer le temps de l'article */
+    background-color: #ffffff; /* Fond gris clair */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.card-header {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30%; /* Couleur de fond */
+}
+
+/* Bouton pour publier */
+.btn-primary {
+    background-color: #fff; /* Nouvelle couleur de fond */
+    color: #000000; /* Nouvelle couleur du texte */
+    border: 2px solid #000; /* Nouvelle couleur de la bordure */
+    border-radius: 5px; /* Nouveau rayon des coins */
+}
+
+.btn-primary:hover {
+    background-color: #000; /* Nouvelle couleur de fond au survol */
+    color: #fff; /* Nouvelle couleur du texte au survol */
+    border-color: #000; /* Nouvelle couleur de la bordure au survol */
+}
+
+/* Style pour les commentaires */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.5); /* Nouvelle couleur de fond (blanc transparent) */
+    border-radius: 30px; /* Nouveau rayon des coins */
+    margin-bottom: 10px; /* Espacement entre les commentaires */
+}
+
+/* Modifier le texte du formulaire pour ajouter un commentaire */
+.card h5 {
+    margin: 0; /* Supprimer la marge pour éviter le cadre */
+}
+
+/* Modifier l'apparence du champ de commentaire */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.5); /* Nouvelle couleur de fond (blanc transparent) */
+    border-radius: 10px; /* Nouveau rayon des coins */
+}

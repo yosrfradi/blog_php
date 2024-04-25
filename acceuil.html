@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styleaccl.css">
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+    
+        .video-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: -1;
+        }
+    
+        .video-bg {
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+    
+        /* Optional styles */
+        .content {
+          position: fixed;
+          z-index: 1;
+          padding: 20px;
+          color: white;
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <div class="video-container">
+        <video class="video-bg" src="flag.mp4" muted autoplay loop></video>
+      </div>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">News</a></li>
+                <li><a href="inscript.html">Sign In</a></li>
+                <li><a href="inscript.html">Sign up</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>WELCOME TO PALESTINE SPECTRUM</h1>
+            <p>Discover the Unfiltered Truth Behind Palestine's Reality</p>
+            <div class="button-container">
+                <a href="index.html"><button class="fill-button" ><span>Suivant</span></button></a>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
